@@ -1,0 +1,14 @@
+<h2>Add Roles</h2>
+
+<?php echo $this->tag->form("/index/addRoles"); ?>
+<?php echo isset($message) ? $message : ''; ?>
+<p>
+    <label for="role_field">Enter Role</label>
+    <?php echo $this->tag->textField("role_field"); ?>
+</p>
+
+<p>
+    <?php echo $this->tag->submitButton("Add Role"); ?>
+</p>
+
+</form>

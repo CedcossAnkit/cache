@@ -1,0 +1,34 @@
+<h2>Settings</h2>
+
+<?php echo $this->tag->form("/order/settings"); ?>
+<?php echo isset($message) ? $message : ''; ?>
+<p>
+    <label for="title_optimization">Title optimization</label>
+    <?php echo $this->tag->select("title_optimization", [
+
+        1 => 'With Tags',
+        2 => 'Without Tags',
+
+    ]); ?>
+</p>
+
+<p>
+    <label for="default_price">Default Price</label>
+    <?php echo $this->tag->textField("default_price"); ?>
+</p>
+
+<p>
+    <label for="default_stock">Default Stock</label>
+    <?php echo $this->tag->textField("default_stock"); ?>
+</p>
+
+<p>
+    <label for="default_zipcode">Default Zipcode</label>
+    <?php echo $this->tag->textField("default_zipcode"); ?>
+</p>
+
+<p>
+    <?php echo $this->tag->submitButton("Submit"); ?>
+</p>
+
+</form>

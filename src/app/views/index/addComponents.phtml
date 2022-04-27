@@ -1,0 +1,19 @@
+<h2>Add Components</h2>
+
+<?php echo $this->tag->form("/index/addComponents"); ?>
+<?php echo isset($message) ? $message : ''; ?>
+<p>
+    <label for="controller">Enter Controller</label>
+    <?php echo $this->tag->textField("controller"); ?>
+</p>
+
+<p>
+    <label for="action">Enter Action</label>
+    <?php echo $this->tag->textField("action"); ?>
+</p>
+
+<p>
+    <?php echo $this->tag->submitButton("Add Component"); ?>
+</p>
+
+</form>

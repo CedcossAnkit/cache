@@ -1,0 +1,24 @@
+<h2><?php echo $this->locale->_("Add User"); ?></h2>
+
+<?php echo $this->tag->form("/index/addUser"); ?>
+<?php echo isset($message) ? $message : ''; ?>
+<p>
+    <label for="username"><?php echo $this->locale->_("Username"); ?></label>
+    <?php echo $this->tag->textField("username"); ?>
+</p>
+
+<p>
+    <label for="email"><?php echo $this->locale->_("Add User"); ?></label>
+    <?php echo $this->tag->textField("email"); ?>
+</p>
+
+<p>
+    <label for="role_field"><?php echo $this->locale->_("Role"); ?></label>
+    <?php echo $this->tag->select(["role_field", Roles::find(), 'using' => ['role_field', 'role_field']]); ?>
+</p>
+
+<p>
+    <?php echo $this->tag->submitButton($this->locale->_("Add User")); ?>
+</p>
+
+</form>

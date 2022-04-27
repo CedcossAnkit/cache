@@ -1,0 +1,50 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#"><?php echo $this->locale->_("Navbar"); ?></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li>
+        <form action="" method="get">
+          <label for="locale"><?php echo $this->locale->_("Select Language"); ?></label>
+          <select name="locale" id="locale" onchange="submit()">
+            <option value="">None</option>
+            <option value="en">English</option>
+            <option value="nl_NL">Dutch</option>
+            <option value="en_US">English US</option>
+          </select>
+          <input type="hidden" name="bearer" value=<?php echo $_GET['bearer']??'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vZXhhbXBsZS5vcmciLCJhdWQiOiJodHRwOi8vZXhhbXBsZS5jb20iLCJpYXQiOjEzNTY5OTk1MjQsIm5iZiI6MTM1NzAwMDAwMCwicm9sZSI6ImFkbWluIiwidXNlcm5hbWUiOiJzYXVyYWJoIn0.19gDsUjvmMKb5ydHdbogi3Pi7K1tyOoFDqNJ51HtMbE'; ?>>
+        </form>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/products"><?php echo $this->locale->_("Add Product"); ?> </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/products/listProducts"><?php echo $this->locale->_("View Products"); ?></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/order/placeorder"><?php echo $this->locale->_("Place Order"); ?></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/order/listOrders"><?php echo $this->locale->_("View Orders"); ?></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/order/settings"><?php echo $this->locale->_("Settings"); ?></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/index/addUser"><?php echo $this->locale->_("Add User"); ?></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/index/addRoles"><?php echo $this->locale->_("Add Role"); ?></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/index/addComponents"><?php echo $this->locale->_("Add Component"); ?></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/index/ACL"><?php echo $this->locale->_("ACL"); ?></a>
+      </li><br>
+
+    </ul>
+  </div>
+</nav>

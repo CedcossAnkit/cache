@@ -1,0 +1,35 @@
+<h2>Place Order</h2>
+
+<?php echo $this->tag->form("/order/placeorder"); ?>
+<?php echo isset($message) ? $message : ''; ?>
+<p>
+    <label for="customer_name">Customer Name</label>
+    <?php echo $this->tag->textField("customer_name"); ?>
+</p>
+
+<p>
+    <label for="customer_address">Customer Address</label>
+    <?php echo $this->tag->textField("customer_address"); ?>
+</p>
+
+<p>
+    <label for="zipcode">Zipcode</label>
+    <?php echo $this->tag->textField("zipcode"); ?>
+</p>
+
+<p>
+    <label for="product">Product</label>
+    <?php echo $this->tag->select(["product", Products::find(), 'using'=>['name', 'name']]); ?>
+</p>
+
+
+<p>
+    <label for="quantity">Quantity</label>
+    <?php echo $this->tag->textField("quantity"); ?>
+</p>
+
+<p>
+    <?php echo $this->tag->submitButton("Place Order"); ?>
+</p>
+
+</form>

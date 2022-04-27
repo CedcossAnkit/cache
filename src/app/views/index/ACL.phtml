@@ -1,0 +1,26 @@
+<h2>ACL</h2>
+
+<?php echo $this->tag->form("/secure/build"); ?>
+<?php echo isset($message) ? $message : ''; ?>
+
+
+<p>
+    <label for="role_field">Role</label>
+    <?php echo $this->tag->select(["role_field", Roles::find(), 'using' => ['role_field', 'role_field']]); ?>
+</p>
+
+
+<?php
+// print_r(json_encode(Components::find()));
+foreach (Components::find() as $key => $value) {
+    echo '<input type="checkbox" id="vehicle1" name="component[]" value="'.$value->id.'">
+          <label for="vehicle1">'.$value->controller.'=>'.$value->action.'</label><br>';
+    
+}
+?>
+
+<p>
+    <?php echo $this->tag->submitButton("Add Permission"); ?>
+</p>
+
+</form>

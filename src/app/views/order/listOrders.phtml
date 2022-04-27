@@ -1,0 +1,30 @@
+<h1>Orders</h1>
+<table class="table table-bordered table-hover">
+    <thead class="thead-light">
+        <tr>
+            <th>#</th>
+            <th>Customer Name</th>
+            <th>Customer Address</th>
+            <th>Zipcode</th>
+            <th>Product</th>
+            <th>Quantity</th>
+        </tr>
+    </thead>
+    <tfoot>
+        <tr>
+            <td colspan="3">Total Orders: <?php echo $data->count(); ?></td>
+        </tr>
+    </tfoot>
+    <tbody>
+        <?php foreach ($data as $value) { ?>
+            <tr>
+                <td><?php echo $value->id; ?></td>
+                <td><?php echo $value->customer_name; ?></td>
+                <td><?php echo $value->customer_address; ?></td>
+                <td><?php echo $value->zipcode; ?></td>
+                <td><?php echo $value->product; ?></td>
+                <td><?php echo $value->quantity; ?></td>
+            </tr>
+        <?php } ?>
+    </tbody>
+</table>
